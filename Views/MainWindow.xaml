@@ -1,0 +1,336 @@
+﻿<Window
+    x:Class="WpfApp14.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:localViewModels="clr-namespace:WpfApp14.ViewModels"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Binancedy"
+    Width="800"
+    Height="600"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <localViewModels:MainViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="240" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <GroupBox
+            Grid.Row="0"
+            Grid.Column="0"
+            Margin="5,0,0,5"
+            Header="Account">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="METAMASK_ADDRESS:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="METAMASK_PRIVATE_KEY:" />
+                    <TextBox Grid.Column="1" Margin="5,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button
+                        Grid.Column="0"
+                        Margin="0,0,5,0"
+                        Content="SAVE CONFIG"
+                        FontSize="12" />
+                    <Button
+                        Grid.Column="1"
+                        Margin="5,0,0,0"
+                        Content="OPEN CONFIG"
+                        FontSize="12" />
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="0"
+            Grid.Column="1"
+            Margin="5,0,5,5"
+            Header="Sniper">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="TOKEN_ADDRESS:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="AMOUNT:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="TX_AMOUNT:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="TAKE_PROFIT:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="STOP_LOSS:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="TRAILING_STOP_LOSS:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        FontSize="12"
+                        Text="SELL_PERCENT:" />
+                    <TextBox Grid.Column="1" Margin="0,10,5,0" />
+                </Grid>
+                <Grid Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        Content="BUY ONLY"
+                        FontSize="12" />
+                    <CheckBox
+                        Grid.Column="1"
+                        Margin="5,10,0,0"
+                        Content="SELL ONLY"
+                        FontSize="12" />
+                </Grid>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <CheckBox
+                        Grid.Column="0"
+                        Margin="5,10,0,0"
+                        Content="SWAP ENABLE CHECK"
+                        FontSize="12" />
+                    <CheckBox
+                        Grid.Column="1"
+                        Margin="5,10,0,0"
+                        Content="NO BUY"
+                        FontSize="12" />
+                </Grid>
+                <Grid Grid.Row="2" Grid.Column="1">
+                    <Button
+                        Grid.Column="0"
+                        Margin="5,5,0,0"
+                        Content="CHECK CONTRACT" />
+                </Grid>
+                <Grid Grid.Row="3" Grid.Column="1">
+                    <Button
+                        Grid.Column="0"
+                        Margin="5,5,0,0"
+                        Content="CHECK HONEY POT" />
+                </Grid>
+                <Grid Grid.Row="4" Grid.Column="1">
+                    <Button
+                        Grid.Column="0"
+                        Margin="5,5,0,0"
+                        Content="CREATE TASK" />
+                </Grid>
+                <Grid Grid.Row="5" Grid.Column="1">
+                    <Button
+                        Grid.Column="0"
+                        Margin="5,5,0,0"
+                        Content="START ALL TASK" />
+                </Grid>
+                <Grid Grid.Row="6" Grid.Column="1">
+                    <Button
+                        Grid.Column="0"
+                        Margin="5,5,0,0"
+                        Content="STOP ALL TASK" />
+                </Grid>
+            </Grid>
+        </GroupBox>
+        <GroupBox
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Margin="5,0,5,5"
+            Header="Task">
+            <ListView Margin="5" ItemsSource="{Binding Tokens}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="70">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button
+                                        Width="50"
+                                        Command="{Binding StartCommand}"
+                                        Content="START" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="70">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button
+                                        Width="50"
+                                        Command="{Binding StopCommand}"
+                                        Content="STOP" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="70">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button
+                                        Width="50"
+                                        Command="{Binding DeleteCommand}"
+                                        Content="DELETE" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="70">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button
+                                        Width="50"
+                                        Command="{Binding ViewCommand}"
+                                        Content="VIEW" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn
+                            Width="110"
+                            DisplayMemberBinding="{Binding name}"
+                            Header="TOKEN NAME" />
+                        <GridViewColumn
+                            Width="110"
+                            DisplayMemberBinding="{Binding symbol}"
+                            Header="TOKEN SYMBOL" />
+                        <GridViewColumn
+                            Width="110"
+                            DisplayMemberBinding="{Binding address}"
+                            Header="TOKEN ADDRESS" />
+                        <GridViewColumn
+                            Width="100"
+                            DisplayMemberBinding="{Binding amount}"
+                            Header="AMOUNT" />
+                        <GridViewColumn
+                            Width="100"
+                            DisplayMemberBinding="{Binding txamount}"
+                            Header="TX AMOUNT" />
+                        <GridViewColumn
+                            Width="100"
+                            DisplayMemberBinding="{Binding takeprofit}"
+                            Header="TAKE PROFIT" />
+                        <GridViewColumn
+                            Width="100"
+                            DisplayMemberBinding="{Binding stoploss}"
+                            Header="STOP LOSS" />
+                        <GridViewColumn
+                            Width="120"
+                            DisplayMemberBinding="{Binding trailingstoploss}"
+                            Header="TRAILING STOP LOSS" />
+                        <GridViewColumn
+                            Width="120"
+                            DisplayMemberBinding="{Binding sellpercent}"
+                            Header="SELL PERCENT" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </GroupBox>
+    </Grid>
+</Window>
